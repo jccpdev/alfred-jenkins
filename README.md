@@ -3,6 +3,9 @@
 ## How to use
 
 1) Download alfred workflow file and double click it or add it to jenkins
+2) Open input keyword workflow and put jenkins url with username and api key where it says `"JENKINS_URL_HERE"` 
+
+Sample jenkins url `http://username:api-key@jenkins.your-jenkins-server.com`
 
 ## How to edit
 
