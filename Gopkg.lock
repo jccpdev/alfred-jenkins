@@ -14,6 +14,12 @@
   revision = "4442edb3db31196622da56482fd8d0fa375fba4d"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/jccpdev/alfred-go"
+  packages = ["src/feedback"]
+  revision = "a99398adbe434817ebbc854e32639b0daa7b3163"
+
+[[projects]]
   name = "github.com/pmezard/go-difflib"
   packages = ["difflib"]
   revision = "792786c7400a136282c1664665ae0a8db921c6c2"
@@ -28,6 +34,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "e4c069badae8a5ca02812b859540734d2fb43b81a9a32a346dffd4a07dbe1551"
+  inputs-digest = "60df9733f336d3f1bfe59c09a5e6960a6c3683ca7ca4a9b4088385f115a88816"
   solver-name = "gps-cdcl"
   solver-version = 1

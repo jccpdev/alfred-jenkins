@@ -24,3 +24,7 @@
 [[constraint]]
   branch = "master"
   name = "github.com/jarcoal/httpmock"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/jccpdev/alfred-go"

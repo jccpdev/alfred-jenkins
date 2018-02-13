@@ -7,6 +7,7 @@ import (
 	"encoding/xml"
 	"strconv"
 	"regexp"
+	"github.com/jccpdev/alfred-go/src/feedback"
 )
 
 type Handler struct {
@@ -15,7 +16,7 @@ type Handler struct {
 
 func (handler *Handler) GetStatus(query string) (string) {
 
-	fb := Feedback{}
+	fb := feedback.Feedback{}
 
 	url := handler.Url + "/api/json?tree=jobs[name,url,color,healthReport[description,score,iconUrl],lastBuild[number,result]]"
 
@@ -52,7 +53,7 @@ func (handler *Handler) GetStatus(query string) (string) {
 			}
 
 			if matched == true {
-				fb.addItem(MakeItem(job))
+				fb.AddItem(MakeItem(job))
 			}
 
 		}
@@ -69,7 +70,7 @@ func (handler *Handler) GetStatus(query string) (string) {
 
 }
 
-func MakeItem(jobData Jobs) Item {
+func MakeItem(jobData Jobs) feedback.Item {
 
 	var description string
 	var iconUrl string = ""
@@ -85,7 +86,7 @@ func MakeItem(jobData Jobs) Item {
 
 	title := jobData.Name + " [Last Build #" + buildNumber + " - " + jobData.LastBuild.Result + "]"
 
-	return Item{jobData.Name, jobData.Url, "", "", title, description, iconUrl}
+	return feedback.Item{jobData.Name, jobData.Url, "", "", title, description, iconUrl}
 
 }
 
