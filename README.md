@@ -18,3 +18,4 @@ Sample jenkins url `http://username:api-key@jenkins.your-jenkins-server.com`
 ### Required External Goland Packages
 * "github.com/jarcoal/httpmock"
 * "github.com/stretchr/testify/assert"
+* "github.com/jccpdev/alfred-go"
